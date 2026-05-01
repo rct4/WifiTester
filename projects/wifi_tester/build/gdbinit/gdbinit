@@ -1,0 +1,2 @@
+source /home/rct4/esp/projects/wifi_tester/build/gdbinit/symbols
+source /home/rct4/esp/projects/wifi_tester/build/gdbinit/connect
