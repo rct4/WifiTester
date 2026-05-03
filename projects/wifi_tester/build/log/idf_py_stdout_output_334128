@@ -1,0 +1,19 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/rct4/esp/projects/wifi_tester/build/bootloader && /home/rct4/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/rct4/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/rct4/esp/projects/wifi_tester/build/bootloader/bootloader.bin
+Bootloader binary size 0x6650 bytes. 0x9b0 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_tester.c.obj
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+Skipping linker script generation, section names unchanged
+[7/9] Linking CXX executable wifi_tester.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.dev2
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated /home/rct4/esp/projects/wifi_tester/build/wifi_tester.bin
+[9/9] cd /home/rct4/esp/projects/wifi_tester/build && /home/rct4/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/rct4/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/rct4/esp/projects/wifi_tester/build/partition_table/partition-table.bin /home/rct4/esp/projects/wifi_tester/build/wifi_tester.bin
+wifi_tester.bin binary size 0xbd260 bytes. Smallest app partition is 0x100000 bytes. 0x42da0 bytes (26%) free.

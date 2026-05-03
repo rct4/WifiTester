@@ -17,8 +17,8 @@
 #include "lwip/netdb.h"
 #include "ping/ping_sock.h"
 
-#define WIFI_SSID      "Hotspottest"
-#define WIFI_PASSWORD  "iloveece"
+#define WIFI_SSID      "Gleshlight "
+#define WIFI_PASSWORD  "dickAndBalls1!"
 
 #define PING_TARGET    "8.8.8.8"
 
@@ -42,10 +42,13 @@ static void wifi_event_handler(
         esp_wifi_connect();
     } 
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        ESP_LOGW(TAG, "Disconnected. Reconnecting...");
+        wifi_event_sta_disconnected_t *disc =
+            (wifi_event_sta_disconnected_t *) event_data;
+
+        ESP_LOGW(TAG, "Disconnected. Reason: %d", disc->reason);
+
         esp_wifi_connect();
-        xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
-    } 
+    }
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *event = (ip_event_got_ip_t *) event_data;
         ESP_LOGI(TAG, "Got IP: " IPSTR, IP2STR(&event->ip_info.ip));
