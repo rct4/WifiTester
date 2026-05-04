@@ -1,0 +1,173 @@
+Command: /home/rct4/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/rct4/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/rct4/esp/projects/wifi_tester/build/wifi_tester.elf /home/rct4/esp/projects/wifi_tester/build/bootloader/bootloader.elf -m '/home/rct4/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/rct4/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dev-4182-g47faecc3e4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 30 2026 17:59:03[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a92ch (108844) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0002a954 vaddr=3ffb0000 size=045a8h ( 17832) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0002ef04 vaddr=40080000 size=01114h (  4372) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=89188h (561544) map[0m
+[0;32mI (338) esp_image: segment 4: paddr=000b91b0 vaddr=40081114 size=1456ch ( 83308) load[0m
+[0;32mI (372) esp_image: segment 5: paddr=000cd724 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (383) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (383) boot: Disabling RNG early entropy source...[0m
+[0;32mI (394) cpu_start: Multicore app[0m
+[0;32mI (402) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (402) cpu_start: Pro cpu start user code[0m
+[0;32mI (402) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (404) app_init: Application information:[0m
+[0;32mI (408) app_init: Project name:     wifi_tester[0m
+[0;32mI (412) app_init: App version:      1[0m
+[0;32mI (416) app_init: Compile time:     Apr 30 2026 17:58:51[0m
+[0;32mI (421) app_init: ELF file SHA256:  5a763e6fb...[0m
+[0;32mI (425) app_init: ESP-IDF:          v6.1-dev-4182-g47faecc3e4[0m
+[0;32mI (431) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (434) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (438) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (443) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (449) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (454) heap_init: At 3FFB8AE0 len 00027520 (157 KiB): DRAM[0m
+[0;32mI (459) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40095680 len 0000A980 (42 KiB): IRAM[0m
+[0;32mI (477) spi_flash: detected chip: generic[0m
+[0;32mI (479) spi_flash: flash io: dio[0m
+[0;33mW (482) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (496) main_task: Started on CPU0[0m
+[0;32mI (506) main_task: Calling app_main()[0m
+[0;32mI (536) wifi:wifi driver task: 3ffc056c, prio:23, stack:6656, core=0[0m
+[0;32mI (546) wifi:wifi firmware version: 45e1b97[0m
+[0;32mI (546) wifi:wifi certification version: v7.0[0m
+[0;32mI (546) wifi:config NVS flash: enabled[0m
+[0;32mI (546) wifi:config nano formatting: disabled[0m
+[0;32mI (556) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (556) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (556) wifi:Init management short buffer num: 32[0m
+[0;32mI (566) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (566) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (576) wifi:Init static rx buffer num: 10[0m
+[0;32mI (576) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (586) wifi_init: rx ba win: 6[0m
+[0;32mI (586) wifi_init: accept mbox: 6[0m
+[0;32mI (586) wifi_init: tcpip mbox: 32[0m
+[0;32mI (586) wifi_init: udp mbox: 6[0m
+[0;32mI (596) wifi_init: tcp mbox: 6[0m
+[0;32mI (596) wifi_init: tcp tx win: 5760[0m
+[0;32mI (596) wifi_init: tcp rx win: 5760[0m
+[0;32mI (606) wifi_init: tcp mss: 1440[0m
+[0;32mI (606) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (606) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (616) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (616) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (716) wifi:mode : sta (b0:cb:d8:cf:f4:9c)[0m
+[0;32mI (716) wifi:enable tsf[0m
+[0;32mI (716) wifi_tester: Connecting to Wi-Fi...[0m
+[0;32mI (726) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (736) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (796) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (816) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (866) wifi:<ba-add>idx:0 (ifx:0, a0:36:bc:1a:9b:b8), tid:5, ssn:0, winSize:64[0m
+[0;32mI (976) wifi:connected with Gleshlight , aid = 4, channel 6, BW20, bssid = a0:36:bc:1a:9b:b8[0m
+[0;32mI (976) wifi:security: WPA2-PSK, phy: bgn, rssi: -56, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (986) wifi:pm start, type: 1[0m
+
+[0;32mI (986) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1026) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1026) wifi:<ba-add>idx:1 (ifx:0, a0:36:bc:1a:9b:b8), tid:6, ssn:1, winSize:64[0m
+[0;32mI (2026) esp_netif_handlers: sta ip: 192.168.50.160, mask: 255.255.255.0, gw: 192.168.50.1[0m
+[0;32mI (2026) wifi_tester: Got IP: 192.168.50.160[0m
+[0;32mI (2026) wifi_tester: Wi-Fi connected.[0m
+[0;32mI (2036) wifi_tester: Started 60-second ping test to 8.8.8.8[0m
+[0;32mI (2036) main_task: Returned from app_main()[0m
+[0;32mI (2046) wifi_tester: Reply seq=1073479681 time=16 ms ttl=1073510001 | avg=16.00 ms min=16 max=16 | jitter=0.00 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (3046) wifi_tester: Reply seq=1073479682 time=20 ms ttl=1073510001 | avg=18.00 ms min=16 max=20 | jitter=0.80 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (4036) wifi_tester: Reply seq=1073479683 time=14 ms ttl=1073510001 | avg=16.67 ms min=14 max=20 | jitter=1.84 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (5036) wifi_tester: Reply seq=1073479684 time=14 ms ttl=1073510001 | avg=16.00 ms min=14 max=20 | jitter=1.47 ms | loss=0.0% | RSSI=-53 dBm[0m
+[0;32mI (6046) wifi_tester: Reply seq=1073479685 time=18 ms ttl=1073510001 | avg=16.40 ms min=14 max=20 | jitter=1.98 ms | loss=0.0% | RSSI=-54 dBm[0m
+[0;32mI (7036) wifi_tester: Reply seq=1073479686 time=11 ms ttl=1073510001 | avg=15.50 ms min=11 max=20 | jitter=2.98 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (8036) wifi_tester: Reply seq=1073479687 time=11 ms ttl=1073510001 | avg=14.86 ms min=11 max=20 | jitter=2.39 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (9036) wifi_tester: Reply seq=1073479688 time=11 ms ttl=1073510001 | avg=14.38 ms min=11 max=20 | jitter=1.91 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (10036) wifi_tester: Reply seq=1073479689 time=12 ms ttl=1073510001 | avg=14.11 ms min=11 max=20 | jitter=1.73 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (11046) wifi_tester: Reply seq=1073479690 time=16 ms ttl=1073510001 | avg=14.30 ms min=11 max=20 | jitter=2.18 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (12036) wifi_tester: Reply seq=1073479691 time=11 ms ttl=1073510001 | avg=14.00 ms min=11 max=20 | jitter=2.75 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (13036) wifi_tester: Reply seq=1073479692 time=15 ms ttl=1073510001 | avg=14.08 ms min=11 max=20 | jitter=3.00 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (14046) wifi_tester: Reply seq=1073479693 time=25 ms ttl=1073510001 | avg=14.92 ms min=11 max=25 | jitter=4.40 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (15036) wifi_tester: Reply seq=1073479694 time=11 ms ttl=1073510001 | avg=14.64 ms min=11 max=25 | jitter=6.32 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (16036) wifi_tester: Reply seq=1073479695 time=11 ms ttl=1073510001 | avg=14.40 ms min=11 max=25 | jitter=5.05 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (17036) wifi_tester: Reply seq=1073479696 time=11 ms ttl=1073510001 | avg=14.19 ms min=11 max=25 | jitter=4.04 ms | loss=0.0% | RSSI=-56 dBm[0m
+[0;32mI (18046) wifi_tester: Reply seq=1073479697 time=17 ms ttl=1073510001 | avg=14.35 ms min=11 max=25 | jitter=4.43 ms | loss=0.0% | RSSI=-56 dBm[0m
+[0;32mI (19046) wifi_tester: Reply seq=1073479698 time=23 ms ttl=1073510001 | avg=14.83 ms min=11 max=25 | jitter=4.75 ms | loss=0.0% | RSSI=-56 dBm[0m
+[0;32mI (20046) wifi_tester: Reply seq=1073479699 time=19 ms ttl=1073510001 | avg=15.05 ms min=11 max=25 | jitter=4.60 ms | loss=0.0% | RSSI=-59 dBm[0m
+[0;32mI (21036) wifi_tester: Reply seq=1073479700 time=11 ms ttl=1073510001 | avg=14.85 ms min=11 max=25 | jitter=5.28 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (22036) wifi_tester: Reply seq=1073479701 time=14 ms ttl=1073510001 | avg=14.81 ms min=11 max=25 | jitter=4.82 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (23046) wifi_tester: Reply seq=1073479702 time=20 ms ttl=1073510001 | avg=15.05 ms min=11 max=25 | jitter=5.06 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (24036) wifi_tester: Reply seq=1073479703 time=14 ms ttl=1073510001 | avg=15.00 ms min=11 max=25 | jitter=5.25 ms | loss=0.0% | RSSI=-56 dBm[0m
+[0;32mI (25036) wifi_tester: Reply seq=1073479704 time=13 ms ttl=1073510001 | avg=14.92 ms min=11 max=25 | jitter=4.40 ms | loss=0.0% | RSSI=-52 dBm[0m
+[0;32mI (26036) wifi_tester: Reply seq=1073479705 time=14 ms ttl=1073510001 | avg=14.88 ms min=11 max=25 | jitter=3.72 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (27036) wifi_tester: Reply seq=1073479706 time=11 ms ttl=1073510001 | avg=14.73 ms min=11 max=25 | jitter=3.57 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (28036) wifi_tester: Reply seq=1073479707 time=14 ms ttl=1073510001 | avg=14.70 ms min=11 max=25 | jitter=3.46 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (29036) wifi_tester: Reply seq=1073479708 time=15 ms ttl=1073510001 | avg=14.71 ms min=11 max=25 | jitter=2.97 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (30036) wifi_tester: Reply seq=1073479709 time=14 ms ttl=1073510001 | avg=14.69 ms min=11 max=25 | jitter=2.57 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (31036) wifi_tester: Reply seq=1073479710 time=16 ms ttl=1073510001 | avg=14.73 ms min=11 max=25 | jitter=2.46 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (32036) wifi_tester: Reply seq=1073479711 time=13 ms ttl=1073510001 | avg=14.68 ms min=11 max=25 | jitter=2.57 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (33036) wifi_tester: Reply seq=1073479712 time=11 ms ttl=1073510001 | avg=14.56 ms min=11 max=25 | jitter=2.45 ms | loss=0.0% | RSSI=-52 dBm[0m
+[0;32mI (34036) wifi_tester: Reply seq=1073479713 time=13 ms ttl=1073510001 | avg=14.52 ms min=11 max=25 | jitter=2.36 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (35046) wifi_tester: Reply seq=1073479714 time=18 ms ttl=1073510001 | avg=14.62 ms min=11 max=25 | jitter=2.89 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (36046) wifi_tester: Reply seq=1073479715 time=24 ms ttl=1073510001 | avg=14.89 ms min=11 max=25 | jitter=3.51 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (37046) wifi_tester: Reply seq=1073479716 time=16 ms ttl=1073510001 | avg=14.92 ms min=11 max=25 | jitter=4.41 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (38036) wifi_tester: Reply seq=1073479717 time=11 ms ttl=1073510001 | avg=14.81 ms min=11 max=25 | jitter=4.53 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (39036) wifi_tester: Reply seq=1073479718 time=13 ms ttl=1073510001 | avg=14.76 ms min=11 max=25 | jitter=4.02 ms | loss=0.0% | RSSI=-56 dBm[0m
+[0;32mI (40036) wifi_tester: Reply seq=1073479719 time=15 ms ttl=1073510001 | avg=14.77 ms min=11 max=25 | jitter=3.62 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (41036) wifi_tester: Reply seq=1073479720 time=11 ms ttl=1073510001 | avg=14.68 ms min=11 max=25 | jitter=3.69 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (42036) wifi_tester: Reply seq=1073479721 time=12 ms ttl=1073510001 | avg=14.61 ms min=11 max=25 | jitter=3.16 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (43036) wifi_tester: Reply seq=1073479722 time=12 ms ttl=1073510001 | avg=14.55 ms min=11 max=25 | jitter=2.52 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (44056) wifi_tester: Reply seq=1073479723 time=30 ms ttl=1073510001 | avg=14.91 ms min=11 max=30 | jitter=5.62 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (45036) wifi_tester: Reply seq=1073479724 time=13 ms ttl=1073510001 | avg=14.86 ms min=11 max=30 | jitter=7.90 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (46046) wifi_tester: Reply seq=1073479725 time=18 ms ttl=1073510001 | avg=14.93 ms min=11 max=30 | jitter=7.32 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (47036) wifi_tester: Reply seq=1073479726 time=13 ms ttl=1073510001 | avg=14.89 ms min=11 max=30 | jitter=6.85 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (48046) wifi_tester: Reply seq=1073479727 time=21 ms ttl=1073510001 | avg=15.02 ms min=11 max=30 | jitter=7.08 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (49036) wifi_tester: Reply seq=1073479728 time=11 ms ttl=1073510001 | avg=14.94 ms min=11 max=30 | jitter=7.67 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (50036) wifi_tester: Reply seq=1073479729 time=13 ms ttl=1073510001 | avg=14.90 ms min=11 max=30 | jitter=6.53 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (51036) wifi_tester: Reply seq=1073479730 time=12 ms ttl=1073510001 | avg=14.84 ms min=11 max=30 | jitter=5.43 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (52036) wifi_tester: Reply seq=1073479731 time=14 ms ttl=1073510001 | avg=14.82 ms min=11 max=30 | jitter=4.74 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (53046) wifi_tester: Reply seq=1073479732 time=21 ms ttl=1073510001 | avg=14.94 ms min=11 max=30 | jitter=5.19 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (54036) wifi_tester: Reply seq=1073479733 time=11 ms ttl=1073510001 | avg=14.87 ms min=11 max=30 | jitter=6.15 ms | loss=0.0% | RSSI=-57 dBm[0m
+[0;32mI (55036) wifi_tester: Reply seq=1073479734 time=11 ms ttl=1073510001 | avg=14.80 ms min=11 max=30 | jitter=4.92 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (56036) wifi_tester: Reply seq=1073479735 time=13 ms ttl=1073510001 | avg=14.76 ms min=11 max=30 | jitter=4.34 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (57046) wifi_tester: Reply seq=1073479736 time=20 ms ttl=1073510001 | avg=14.86 ms min=11 max=30 | jitter=4.87 ms | loss=0.0% | RSSI=-59 dBm[0m
+[0;32mI (58066) wifi_tester: Reply seq=1073479737 time=40 ms ttl=1073510001 | avg=15.30 ms min=11 max=40 | jitter=7.90 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (59046) wifi_tester: Reply seq=1073479738 time=17 ms ttl=1073510001 | avg=15.33 ms min=11 max=40 | jitter=10.92 ms | loss=0.0% | RSSI=-59 dBm[0m
+[0;32mI (60036) wifi_tester: Reply seq=1073479739 time=11 ms ttl=1073510001 | avg=15.25 ms min=11 max=40 | jitter=9.93 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (61056) wifi_tester: Reply seq=1073479740 time=28 ms ttl=1073510001 | avg=15.47 ms min=11 max=40 | jitter=11.35 ms | loss=0.0% | RSSI=-58 dBm[0m
+[0;32mI (62026) wifi_tester: ================ FINAL NETWORK TEST RESULT ================[0m
+[0;32mI (62026) wifi_tester: Target: 8.8.8.8[0m
+[0;32mI (62026) wifi_tester: Duration: 60 seconds[0m
+[0;32mI (62026) wifi_tester: Packets transmitted: 60[0m
+[0;32mI (62026) wifi_tester: Packets received: 60[0m
+[0;32mI (62036) wifi_tester: Packet loss: 0.0%[0m
+[0;32mI (62036) wifi_tester: Average RTT: 15.47 ms[0m
+[0;32mI (62046) wifi_tester: Minimum RTT: 11 ms[0m
+[0;32mI (62046) wifi_tester: Maximum RTT: 40 ms[0m
+[0;32mI (62046) wifi_tester: Final jitter estimate: 11.35 ms[0m
+[0;32mI (62056) wifi_tester: Final RSSI: -58 dBm[0m
+[0;32mI (62056) wifi_tester: ===========================================================[0m
